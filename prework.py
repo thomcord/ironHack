@@ -136,3 +136,47 @@ print(a[4:])
 a = "automobile"
 print(a[3:8])
 
+# Lists
+
+lst = ['The', 'man', 'in', 'the', 'blue', 'suit']
+print(lst[0])
+print((lst[1]))
+print(lst[-1])
+print(lst[2:4])
+
+lst.append('jacket')
+print(lst)
+
+lst.remove('suit')
+print(lst)
+
+lst2 = ['and', 'the', 'green', 'trousers']
+comb_list = lst + lst2
+print(comb_list)
+
+nested = [['A', 'man'], ['a', 'plan'], ['a', 'canal'], ['Panama', '!']]
+print(nested[0])
+print(nested[0][1])
+print(nested[-1][0])
+
+num_list = [34, 12, 93, 783, 330, 896, 1, 55]
+#sum
+print(sum(num_list))
+#mean
+print(sum(num_list)/len(num_list))
+#minimun
+print(min(num_list))
+#maximum
+print(max(num_list))
+
+#Sort Ascending
+num_list.sort()
+print(num_list)
+
+#Sort descending
+num_list.sort(reverse=True)
+print(num_list)
+
+#Reversing
+num_list.reverse()
+print(num_list)
