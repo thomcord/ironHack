@@ -180,3 +180,151 @@ print(num_list)
 #Reversing
 num_list.reverse()
 print(num_list)
+
+
+#Dictionaries
+
+ages = {'Brian':23, 'Amy':22, 'Darlene':47, 'Ralph':32, 'Jordan':28, 'Stephanie':35}
+print(ages['Brian'])
+
+print(ages['Stephanie'])
+
+print(ages.keys())
+
+print(ages.values())
+
+ages['Vanessa']=30
+print(ages)
+
+del ages['Vanessa']
+print(ages)
+
+#Tuples
+
+a = [1,2,3,4,5]
+b = (1,2,3,4,5)
+
+a.append((6))
+print(a)
+
+#b.append(6)
+#It is not possible to .append() on tuples
+
+a.remove(2)
+print(a)
+
+#b.remove(2)
+#It is not possible to .remove() on tuples
+
+a.sort()
+print(a)
+
+#b.sort()
+#It is not possible to .sort() on tuples
+
+tuple(a)
+print(a)
+
+list(b)
+print(b)
+
+#Sets
+
+dupe_list = [1,2,2,3,3,3,4,4,4,4,5,5,5,5,5]
+uniques = set(dupe_list)
+print(uniques)
+
+list(uniques)
+print(uniques)
+
+#Boolean Data Types
+
+happy=True
+print("Happy variable is set to ", happy)
+
+print(5 + 5 == 10)
+print('apple' != 'orange')
+print(100 > 75)
+print(93 < 80)
+print(3 in [1,2,3,4,5])
+print(3 not in [1,2,3,4,5])
+
+
+print((5 + 5 == 10) & ('apple' != 'orange'))
+print((100 > 75) & (93 < 80))
+print((100 > 75) | (93 < 80))
+print((93 < 80) | (3 not in [1,2,3,4,5]))
+
+#Conditional Logic
+
+number = 10
+
+if number<10:
+    print("Numer is less than 10")
+elif number> 10:
+    print("Number is greater than 10")
+elif number == 10:
+    print("Number is exactly 10")
+else:
+    print("Number is probably not a numbe at all")
+
+commute = 30
+rain = False
+traffic = True
+
+if (rain == True) | (traffic == True):
+    if (rain == True) & (traffic == True):
+        total_commute = commute + 15 + 20
+    elif (rain == True) & (traffic == False):
+        total_commute = commute + 15
+    elif (rain == False) & (traffic == True):
+        total_commute = commute + 20
+else:
+    total_commute = commute
+print("Your total commute time is expected to be", total_commute, "minutes.")
+
+#For loops
+range(5, 15)
+len(range(5, 15))
+
+for i in range(5, 15):
+    print(i)
+
+fruits = ['apple', 'orange', 'banana', 'grapes', 'pineapple']
+
+for fruit in fruits:
+    print(fruit)
+
+ages = {'Brian':23, 'Amy':22, 'Darlene':47, 'Ralph':32, 'Jordan':28, 'Stephanie':35}
+
+for name, age in ages.items():
+    print(name, "is", age, "years old.")
+
+num_list = [34, 12, 93, 783, 330, 896, 1, 55]
+
+total = 0
+
+for i in num_list:
+    total += i
+    print("Total is currently", total)
+
+new_list = []
+
+for i in range(1, 11):
+    square = i**2
+    new_list.append(square)
+
+print(new_list)
+
+total_time = 60
+minutes_elapsed = 0
+wait = 15
+
+print("Cake is in the oven.")
+minutes_elapsed += wait
+
+while minutes_elapsed < total_time:
+    print("Cake is not done yet.")
+    minutes_elapsed += wait
+
+print("It's done. Let's eat cake!")
